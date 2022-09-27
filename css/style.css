@@ -592,12 +592,14 @@ width: 100%;
   margin-bottom: 3rem;
 } */
 
-.about-content h1, .container-fluid h1, .projects-heading h1, .skill  {
+.about-content h1, .container-fluid h1, .projects-heading h1, #skills .heading, #experience .heading, #education .heading, #training .heading {
   color: var(--text-secondary-clr);
   padding-top: 3rem;
   padding-bottom: 1rem;
   text-align: left;
 }
+
+
 
 
 /* .about-links {
@@ -726,7 +728,7 @@ width: 100%;
 .projects {
   color: var(--bg-main);
   /* margin-bottom: 7rem; */
-  background-color: #f8f9fa;
+  background-color: #fff;
 }
 
 .projects-heading {
@@ -785,7 +787,7 @@ border-top-right-radius: 10px;
 }
 
 .projects-container {
-  background-color: var(--text-primary-color);
+  background-color: #f8f9fa;
   border-radius: 10px
 }
 
@@ -814,101 +816,6 @@ border-top-right-radius: 10px;
 
 
 /* Contact */
-
-/* .contact-content {
-  margin-right: 3rem;
-  margin-left: 3rem;
-  color: var(--text-primary-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 5rem ;
-}
-
-.contact {
-  margin-bottom: 5rem;
-}
-
-.social-links[datatype="contact-social-links"] {
-  padding-left: 0;
-  margin-bottom: 2rem;
-}
-
-.message {
-  margin-bottom: 2rem;
-}
-
-.contact-left h1 {
-  font-size: 3rem;
-  font-weight: 500;
-}
-
-.message,
-.phone {
-  display: flex;
-}
-
-.message-img,
-.phone-img {
-  padding-right: 1rem;
-}
-
-.contact-right {
-  background-color: var(--text-secondary-clr);
-  border-radius: 30px;
-  width: 50%;
-}
-
-.contact-right-content {
-  padding-top: 3rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
-.form-inputs {
-  display: block;
-  margin-bottom: 3rem;
-  background: transparent;
-  outline: none;
-  padding-bottom: 1rem;
-  border: none;
-  border-bottom: 1px solid var(--text-primary-color);
-  width: 70%;
-}
-
-.form-inputs::placeholder {
-  color: var(--text-primary-color);
-}
-
-input {
-  color: var(--text-primary-color);
-}
-
-.contact-form {
-  padding-top: 3rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
-.contact-form button {
-  background-color: var(--bg-main);
-  border: none;
-  border-radius: 10px;
-  width: 30%;
-  padding: .5rem 1rem;
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--text-primary-color);
-  margin-bottom: 3rem;
-  transition: all .3s ease-in-out;
-}
-
-.contact-form button:hover {
-  cursor: pointer;
-  background-color: var(--bg-footer);
-
-} */
-
 .vg-page {
     position: relative;
     display: block;
@@ -917,7 +824,7 @@ input {
     overflow: hidden;
   }
   .page-contact {
-    background-color: #fff;
+    background-color: #f8f9fa;
   }
 
   .badge-subhead {
@@ -1050,9 +957,9 @@ input {
   padding-right: 3rem;
   position: relative;
 }
-.footer-heading img {
+/* .footer-heading img {
   width: 50%;
-}
+} */
 
 .footer-message {
 position: relative;
@@ -1063,10 +970,15 @@ bottom: 3px;
   padding-top: 2rem;
 }
 
-.social-links img[datatype="copyright"] {
-  padding-right: 0;
+.social-links span {
+  margin-right: 20px;
+  font-size: 25px;
+  color: #fff;
 }
 
+.social-links span:hover {
+  color: #6f42c1;
+}
 
 .copyright em {
   color: var(--text-secondary-clr);
@@ -1286,11 +1198,11 @@ bottom: 3px;
     margin-left: 5rem;
     transition: .5s;
 } */
-.about-content {
+.about-content, .container .heading  {
   padding: 20px;
 }
 @media only screen and (max-width:767px) {
-    .about-content {
+    .about-content, .container .heading {
       padding: 0px;
     }
   }
@@ -1304,15 +1216,17 @@ bottom: 3px;
   }
 
 /* Experience */
+#experience, #training {
+  background: #f8f9fa;
+}
 .page {
   width: 100%;
   margin-bottom: 7em;
 }
 .page .heading {
-  font-weight: 800;
-  font-size: 30px;
+  /* font-size: 30px; */
   margin-bottom: 30px;
-  color: #3e64ff;
+  color: var(--text-secondary-clr);
 }
 
 .resume-wrap {
@@ -1324,7 +1238,7 @@ bottom: 3px;
 .resume-wrap .icon {
   width: 50px;
   height: 50px;
-  background: #3e64ff;
+  background: var(--text-secondary-clr);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1332,7 +1246,7 @@ bottom: 3px;
 }
 .resume-wrap .icon span {
   color: #fff;
-  font-size: 28px;
+  font-size: 25px;
 }
 .resume-wrap .text {
   width: calc(100% - 50px);
@@ -1340,8 +1254,9 @@ bottom: 3px;
 .resume-wrap .date {
   font-weight: 700;
   font-size: 16px;
+  /* margin-bottom: 50px; */
   color: rgba(0, 0, 0, 0.6);
-  color: #3e64ff;
+  color: var(--text-secondary-clr);
 }
 .resume-wrap h2 {
   font-size: 24px;
@@ -1371,3 +1286,94 @@ bottom: 3px;
     height: 50px;
   }
 }
+
+
+/* Skill bars */
+    
+    .skill-name{
+      /* font-size: 18px;
+      font-weight: 700;
+      color: #f1f1f1;
+      text-transform: uppercase;
+      margin: 20px 0; */
+      font-family: "poppins-bold", sans-serif;
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: 500;
+      top: -3rem;
+    }
+    
+    .skill {
+      /* padding-top: 1rem; */
+      padding-bottom: 30px;
+    }
+
+    .skill-bar{
+      height: 10px;
+      background: #e6e6e6;
+      border-radius: 5px;
+    }
+
+    
+    
+    .skill-per{
+      height: 10px;
+      background: #6f42c1;
+      color: #fff;
+      border-radius: 3px;
+      position: relative;
+      animation: fillBars 2.5s 1;
+    }
+    
+    .skill-per::before{
+      content: attr(per);
+      position: absolute;
+      padding: 4px 6px;
+      /* background: #313131; */
+      background: #6f42c1;
+      border-radius: 4px;
+      font-size: 12px;
+      top: -35px;
+      right: 0;
+      transform: translateX(50%);
+    }
+    
+    .skill-per::after{
+      content: "";
+      position: absolute;
+      border-radius: 2px;
+      left: 100%;
+      bottom: 15px;
+      margin-left: -5px;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      border-top: 5px solid #6f42c1;
+    }
+    
+    @keyframes fillBars{
+      from{
+        width: 0;
+      }
+      to{
+        width: 100%;
+      }
+    }
+
+    .code {
+      margin-bottom: 1.5rem;
+    }
+
+    .navbar-toggler {
+      font-size: 1.7em !important;
+    }
+    .fa-bars::before {
+      top : 4px !important;
+    }
+    .navbar-light .navbar-toggler {
+      color: transparent !important;
+      border-color: transparent !important;
+  }
+
+  a {
+    color: inherit !important;
+  }
