@@ -289,12 +289,12 @@ a{
   /* margin-top: 3rem; */
 }
 .home-left {
-    margin-top: 3rem;
+    margin-top: 4rem;
     /* margin-left: 3rem; */
     width: 100%;
 }
 .home-right {
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 
 .home-text,
@@ -547,28 +547,17 @@ border-top-right-radius: 10px;
 }
 
 .projects-img-one {
-  background-image: url(/public/assets/easybank.jpg);
+  background-image: url(images/fyuur.jpg);
 }
 
 .projects-img-two {
-  background-image: url(/public/assets/snap.jpg);
+  background-image: url(images/trivia.jpg);
 }
 
 .projects-img-three {
-  background-image: url(/public/assets/go.png);
+  background-image: url(images/lighthaven.jpg);
 }
 
-.projects-img-four {
-  background-image: url(/public/assets/blogr.jpg);
-}
-
-.projects-img-five {
-  background-image: url(/public/assets/xypo.png);
-}
-
-.projects-img-six {
-  background-image: url(/public/assets/codex.png);
-}
 
 .projects-container {
   background-color: #f8f9fa;
