@@ -435,7 +435,7 @@
             </div>
             
             <div class="projects-grid">
-                <div class="easybank projects-container">
+                <div class="projects-container">
                 <div class="projects-img projects-img-one"></div>
                 <div class="projects-description">
                     <h3>Fyuur</h3>
@@ -448,7 +448,7 @@
                 </div>
                 </div>
 
-                <div class="snap projects-container">
+                <div class="projects-container">
                 <div class="projects-img projects-img-two"></div>
                 <div class="projects-description">
                     <h3>Trivia App</h3>
@@ -463,7 +463,7 @@
                 </div>
                 </div>
 
-                <div class="go projects-container">
+                <div class="projects-container">
                     <div class="projects-img projects-img-three"></div>
                     <div class="projects-description">
                         <h3>Light Haven</h3>
@@ -516,7 +516,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <form id="contactForm" method="post">
+                    <form id="contactForm" name="submit-to-google-sheet">
                         <div class="form-row">
                             <div class="col-12 mt-3 wow fadeInUp">
                                 <input class="form-control" type="text" id="name" name="Name" placeholder="Enter Your Name" required>
@@ -583,7 +583,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/sweetalert.min.js"></script>   
-      <script src="js/loadingbutton.js"></script> 
+      <script src="js/main.js"></script> 
       <script>
           $(window).scroll(function(){
               $('nav').toggleClass('scrolled', $(this).scrollTop()>10)
@@ -592,6 +592,17 @@
       <!-- <script src="js/aos.js"></script> -->
     <!-- <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script> -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxsIgBXGSmMWt7V_TKvQkl19gkSNAqI5JPt2p1r7BVEtioNnllaecfYwXhCH7NhvEWHTg/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
     
       
 </body>

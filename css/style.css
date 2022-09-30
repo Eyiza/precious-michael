@@ -546,18 +546,25 @@ border-top-left-radius: 10px;
 border-top-right-radius: 10px;
 }
 
+/* .projects-img-one {
+  background-image: url(/images/fyuur.jpg);
+} */
 .projects-img-one {
-  background-image: url(images/fyuur.jpg);
+  background-image: url(https://i.ibb.co/PYZZgJk/fyuur.jpg);
 }
 
+/* .projects-img-two {
+  background-image: url(/images/trivia.jpg);
+} */
 .projects-img-two {
-  background-image: url(images/trivia.jpg);
+  background-image: url(https://i.ibb.co/QM6829z/trivia.jpg);
 }
-
+/* .projects-img-three {
+  background-image: url(/images/lighthaven.jpg);
+} */
 .projects-img-three {
-  background-image: url(images/lighthaven.jpg);
+  background-image: url(https://i.ibb.co/jh6RTSM/lighthaven.jpg);
 }
-
 
 .projects-container {
   background-color: #f8f9fa;
