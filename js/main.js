@@ -1,4 +1,13 @@
-﻿$('#contactForm').submit(function (e) {
+﻿$(document).ready(function(){
+    var typed = new Typed(".typing", {
+    strings: ["Developer", "Software Engineer"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+    });
+});
+
+$('#contactForm').submit(function (e) {
     e.preventDefault();
     var data = {
         name: $('#name').val(),
@@ -15,7 +24,7 @@
 });
 
 function feedback_message() {
-    $("#btnSubmitForm").html("<i class = 'fa fa-spinner fa-spin'></i> Please Wait").css('margin', '10px');
+    $("#btnSubmitForm").html("<i class = 'fa fa-spinner fa-spin'></i> Sending...").css('margin', '10px');
     $("#btnSubmitForm").attr("disabled", "disabled");
     window.setTimeout(function () {
         swal("Message has been sent", "", "success");
