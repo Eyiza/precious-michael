@@ -562,6 +562,11 @@ a{
 
 
 /* Projects Section */
+.github-text {
+  font-size: 18px;
+  /* margin-left: 8px;  */
+  /* vertical-align: middle; */
+}
 .projects-heading {
   text-align: center;
 }
