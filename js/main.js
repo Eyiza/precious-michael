@@ -1,11 +1,19 @@
 ﻿$(document).ready(function(){
+    // typing animation
     var typed = new Typed(".typing", {
     strings: ["Developer", "Software Engineer"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
     });
-});
+
+    // projects popup
+    $('.image-popup').magnificPopup
+    ({
+        type: 'image',
+        gallery: { enabled: true}
+    });
+})
 
 $('#contactForm').submit(function (e) {
     e.preventDefault();
